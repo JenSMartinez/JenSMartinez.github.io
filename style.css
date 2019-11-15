@@ -1,0 +1,160 @@
+/* Items to add: Html: color, base text, font?; stuff for modal box format, containers? */
+
+html{}
+
+body {
+    background-color:rgb(230, 230, 230); 
+    border: solid black outset;
+    color:rgb(black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stylecontainer {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15%;
+}
+
+h1 {
+    color:saddlebrown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+h2 {
+    color: saddlebrown;
+
+}
+/* Navigation Bar styles */
+ul.nav { /* Navigation parent container */
+    position:fixed;
+    margin-bottom: 10%;
+    width:83.45%;
+    list-style-type: none; /*This is so I can take away the bullet points */
+    padding:0; /* override browser defaults */
+    overflow: hidden; /*overflow content is hidden */
+    background-color: rgb(51, 51, 51);
+    z-index: 2;
+    
+}
+li {
+    float:right;
+} /*after applying this the text stacked up against each other from the left */
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(17, 17, 17);
+    color:whitesmoke;
+    }
+
+/*End Navigation Bar styles */
+
+
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+
+
+
+
+/* The Modal (transparent background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+  /* Modal Body */
+.modal-body {padding: 2px 16px;
+    margin:5px}
+
+  /* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+  /* the modal box */
+.modal-content {
+    position: relative;  
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid rgb(126, 126, 126);
+    width: 70%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+/* Make an slide-in Animation for the box */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0} /*slide the box from this to this and increase opacity as it slides */
+    to {top: 0; opacity: 1}
+  }
+
+  /* close button formatting */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*end modal*/
+
+
+/*Pretty Gradients that I figured out */
+
+/* my gradient for Instagram */
+#instagrad {
+    height: 40px;
+    width: 40px;
+    background-color: purple; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, blue, purple, red, yellow); /* Standard syntax (must be last) */
+}
+#instagrad:hover,
+#instagrad:focus {
+    height: 40px;
+    width: 40px;
+    background-color: purple; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, darkblue, rgb(58, 1, 58), darkred, rgb(187, 187, 0)); /* Standard syntax (must be last) */
+}
+#tweet {
+    background-color:rgb(0, 172, 237); /* Twitter Blue */
+    background-image: 
+}
+#tweet:hover,
+#tweet:focus {
+    background-color:rgb(0, 137, 187)
+}
