@@ -115,7 +115,7 @@ animation-duration: 0.4s
 @keyframes animatetop {
     from {top: -300px; opacity: 0} /*slide the box from this to this and increase opacity as it slides */
     to {top: 0; opacity: 1}
-  }
+}
 
   /* close button formatting */
 .close {
