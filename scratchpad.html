@@ -6,7 +6,7 @@ body {
   font-family: Verdana, sans-serif;
   margin: 0;
 }
-
+/* LIGHT BOX CSS STYLING */
 * {
   box-sizing: border-box;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 /* The Close Button */
-.close {
+.lightclose {
   color: white;
   position: absolute;
   top: 10px;
@@ -60,8 +60,8 @@ body {
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.lightclose:hover,
+.lightclose:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
@@ -148,21 +148,21 @@ img.hover-shadow {
 
 <div class="row">
   <div class="column">
-    <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img src="img_nature.jpg" style="width:100%" onclick="openLightbox();currentSlide(1)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img src="img_snow.jpg" style="width:100%" onclick="openLightbox();currentSlide(2)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="img_mountains.jpg" style="width:100%" onclick="openLightbox();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="img_lights.jpg" style="width:100%" onclick="openLightbox();currentSlide(4)" class="hover-shadow cursor">
   </div>
 </div>
 
 <div id="myLightbox" class="lightbox">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <span class="lightclose cursor" onclick="closeLightbox()">&times;</span>
   <div class="lightbox-content">
 
     <div class="mySlides">
@@ -210,42 +210,88 @@ img.hover-shadow {
 
 <script>
 function openLightbox() {
-  document.getElementById("myLightbox").style.display = "block";
+    document.getElementById("myLightbox").style.display = "block";
 }
 
 function closeLightbox() {
-  document.getElementById("myLightbox").style.display = "none";
+    document.getElementById("myLightbox").style.display = "none";
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
+    showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+    }
 </script>
     
 </body>
 </html>
+<!--                                    <div id="myLightbox" class="lightbox">
+                                            <span class="lightclose cursor" onclick="closeLightbox()">&times;</span>
+                                            <div class="lightbox-content">
+                                          
+                                              <div class="mySlides">
+                                                <div class="numbertext">1 / 4</div>
+                                                <img src="Project assets/dip.jpg" style="width:100%">
+                                              </div>
+                                          
+                                              <div class="mySlides">
+                                                <div class="numbertext">2 / 4</div>
+                                                <img src="Project assets/Port.jpg" style="width:100%">
+                                              </div>
+                                          
+                                              <div class="mySlides">
+                                                <div class="numbertext">3 / 4</div>
+                                                <img src="Project assets/watch.jpg" style="width:100%">
+                                              </div>
+                                              
+                                              <div class="mySlides">
+                                                <div class="numbertext">4 / 4</div>
+                                                <img src="Project assets/blm.jpg" style="width:100%">
+                                              </div>
+                                              
+                                              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                          
+                                               <div class="caption-container">
+                                                <p id="caption"></p>
+                                              </div>
+                                          
+                                          
+                                              <div class="column">
+                                                <img class="demo cursor" src="Project assets/dip.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                                              </div>
+                                              <div class="column">
+                                                <img class="demo cursor" src="Project assets/Port.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                                              </div>
+                                              <div class="column">
+                                                <img class="demo cursor" src="Project assets/watch.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                              </div>
+                                              <div class="column">
+                                                <img class="demo cursor" src="Project assets/blm.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                              </div>
+                                            </div>
+                                        </div>-->

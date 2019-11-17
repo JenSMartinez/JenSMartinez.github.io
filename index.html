@@ -14,71 +14,77 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body> 
-    <!-- Sidebar left: BEGIN CONTAINER-->
         <div class="container-fluid text-center">  
-            <div class="row content">
+            <div class="row content"> <!-- this will be the row that holds all of our main windows the left gray,
+            the middle content window, and the right gray window-->
+
+<!-- Sidebar left: BEGIN CONTAINER-->
                 <div class="col-sm-1">
-                            <p>Nothing is going to end up here</p>
+                    <!-- we are not typing anything here because this is not going to be a content container-->
                 </div>
 <!-- BEGIN: Center Container -->
-                <div class="col-sm-10 text-left" style="background-color: white;height:2000px; padding:0;"> 
-                <!-- Scrolling Navigation Bar -->
+                <div class="col-sm-10 text-left" style="background-color: white; padding:0;"> 
+<!-- Scrolling Navigation Bar -->
                 <ul class="nav">
                     <li style="float:left"> 
-                        <a href="#Home" style="text-decoration: none;">Jen S. Martinez</a>
+                        <a href="#Home" >Jen S. Martinez</a>
+                    </li>
+                    <li>
+                        <a href="#Section1">Examples</a>
                     </li>
                     <li>
                         <a href="#Contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#Section1">Section 1</a>
                     </li>
                 </ul>
                 <!-- End Navbar--> 
 
                 <div class="stylecontainer" id="Home"> <!-- This style container is to mass format spacing for internal content-->
-            <!-- Section Home: About me -->
+<!-- Section Home: About me -->
                         <div class="row" >
-                            <div class="col-4">
-                                <img src="https://picsum.photos/id/1011/300/300" alt="This is me" style=" border-radius: 50%">
+                            <div class="col-4" >
+                                <img src="Project assets/me.JPG" width="100%" height="auto" alt="This is me" style=" border-radius: 50%">
                             </div>
                             
-                            <div class="col-8">
-                                <h1 >About Me</h1>
-                                <div>
-                                        Jen enlisted in the U.S. Marine Corps out of San Diego in 2010. 
-                                        During her time as a military photojournalist, she served in Fort Worth Texas, Fort Meade, Maryland, Syracuse, New York and Okinawa, Japan. 
-                                        In 2017, She graduated from the Military Visual Journalism Program at S.I. Newhouse School of Communications, Syracuse University. 
-                                        In 2018 she was selected as a content team lead for the Department of Defense' redesign project for Defense.gov. 
-                                        She is currently persuing a B.A. in Journalism/ Social Media at University of Nevada, Las Vegas.
-                                </div>
+                            <div class="col-8" >
+                                <h1 >My name is Jen...</h1> <br> <br>
+                                    <div>
+                                        Nice to meet you! I enlisted in the U.S. Marine Corps out of San Diego in 2010. 
+                                        During my time as a military photojournalist, I served in Fort Worth Texas, Fort Meade, Maryland, Syracuse, New York and Okinawa, Japan. 
+                                        In 2017, I graduated from the Military Visual Journalism Program at S.I. Newhouse School of Communications, Syracuse University. 
+                                        In 2018 I was selected as a content team lead for the Department of Defense' redesign project for Defense.gov. 
+                                        I am currently persuing a B.A. in Journalism/ Social Media at University of Nevada, Las Vegas.
+                                    </div>
                             </div>
                         </div> 
-                        <!-- End home-->
-            <!-- Section 1:-->
+                        <!-- End home/ about me-->
+            <!-- Section 1:--> <div id="Section1"></div>
                         <div class="row">
-                            <Div class="col-8" style="padding:5%">
-                                <p> Probably this stuff stuff stuff</p>
+                            <Div class="col-4" style="padding:5%">
+                                    <h1 > What I do</h1> <br> <br>
+                                    <div>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Ut placerat orci nulla pellentesque dignissim enim. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Nec tincidunt praesent semper feugiat nibh sed. Cursus in hac habitasse platea. 
+
+                                    </div>
                             </Div>
-                            <div class="col-4">
-                                <h1 id="Section1"> This is a placeholder for my section</h1>
+                            <div class="col-8" style="padding:5%">
+                                <iframe class="nb" height="650px;" width="750px" src="./testLightBox.html"></iframe>
                             </div>
                         </div>
 
                         <!-- Section 2:Contact: Social Media Links and Modal email form-->
                         <div class="row" style="background-color:purlple">
-                            <div class="col-auto"style="background-color:darkblue">
-                                <h2 id="Contact"> Contact Information</h2>
-                                <p> Click a button to be directed to one of my social media sites!</p>
-                                <div class="row" style="background-color:blue; margin:5%; padding:5%">
-                                        <div class="col-4" >
+                            <div class="col-6">
+                                <h2 id="Contact"> Social Media</h2>
+                                <p Style="color:rgb(85, 85, 85);"> Click a button to be directed to one of my social media sites!</p>
+                                <div class="row" style=" margin:5%; padding:5%">
+                                        <div class="col" >
                                             <Div >
                                                 <a class="badge badge-primary" id="instagrad" href="https://instgram.com/Jens_Camera"  target="_blank">
                                                     <span  class="fa fa-instagram fa-3x"></span>
                                                 </a>
                                             </Div>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col">
                                             <Div> 
                                                 <a class="badge badge-primary" href="https://www.facebook.com/jen.martinez.10" target="_blank">
                                                     <span class="fa fa-facebook-square fa-3x"></span> 
@@ -86,22 +92,32 @@
                                             </Div>
 
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col">
                                             <Div> 
                                                 <a class="badge badge-info" id="tweet" href="https://www.Twitter.com/MyHandleBroke" target="_blank">
                                                     <span class="fa fa-twitter fa-3x"></span>
                                                 </a> 
                                             </Div>
                                         </div>
+                                        <div class="col">
+                                                <Div> 
+                                                    <a class="badge badge-info" id="tweet" href="https://vimeo.com/jensmartinez" target="_blank">
+                                                        <span class="fa fa-vimeo fa-3x"></span>
+                                                    </a> 
+                                                </Div>
+                                            </div>
                                 </div>
                             </div>
-                            <div class="col-1"> 
+                            <div class="col-6"> 
+                                <h2> Reach me other ways?</h2>
+                                <p> You can also visit my website or send me an email!</p> <br>
                                 <!--Begin Contact form Modal-->
-                                    <button type="button" class="btn btn-dark" id="conButton"> Send me an email</button>
+                                <a class="btn btn-dark" href="https://jens.camera" target="_blank" role="button">Visit my photography website</a>
+                                <button type="button" class="btn btn-dark" id="conButton"> Send me <span class="fa fa-envelope"></span></button>
                                     <div id="myModal" class="modal">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                    <p>Place holder for modal content</p>
+                                                    <p>Send an email: Please type your info and message below.</p>
                                                 <span class="close"> &times; </span>
                                                 
                                             </div>
@@ -113,7 +129,7 @@
                                                             <br>
                                                             <textarea name="" id="" rows="10" cols="100" placeholder="How can we help you?"></textarea>
                                                             <br>
-                                                            <button class="btn btn-success" style="float:right">Send it!</button>
+                                                            <button class="btn btn-secondary" style="float:right">Send it!</button>
                                                     </form>
                                             </div>
                                         </div>
@@ -123,11 +139,12 @@
                         
                         </div>
                 </div>
-
+<div class="row">
                         <!-- Footer-->
-            <footer class="container-fluid text-center">
-                    <p>Footer Text</p>
+            <footer class="text-center">
+                    <p>&copy; Jen S. Martinez</p>
                 </footer>
+            </div>
             <!-- End Footer-->
                 </div>
         <!-- END CENTER CONTAINER-->
@@ -136,7 +153,7 @@
 
         <!-- Sidebar right-->
                 <div class="col-sm-1 ">
-                    <p> Nothing is going to end up here</p>
+                    <!-- we are not typing anything here because this is not going to be a content container-->
                     </div>
                     </div>
         </div>
